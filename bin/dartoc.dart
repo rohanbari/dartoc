@@ -1,24 +1,13 @@
-import 'dart:convert';
-import 'dart:io';
-
-import 'package:dartoc/math.dart';
-
-/// Obtain the user input as an integer.
-int getUserInput() {
-  String? str = stdin.readLineSync(encoding: utf8);
-  int value = 0;
-
-  if (str != null) value = int.parse(str);
-  return value;
-}
-
 void main(List<String> args) {
-  print('Enter two values separated by a newline below.');
+  final String intro = """
 
-  int var1 = getUserInput();
-  int var2 = getUserInput();
+  Welcome to the Dartoc repository! You may run the programs by executing:
 
-  int average = add(var1, var2) ~/ 2;
+      \$ dart run bin/<program>.dart
+  
+  Don't forget to star the repository to encourage us:
+    <https://github.com/rohanbari/dartoc>
+  """;
 
-  print('The average of $var1 and $var2 is $average.');
+  print(intro);
 }
